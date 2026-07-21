@@ -175,7 +175,7 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
 .exec-stat-lbl{font-size:10px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:5px;text-align:center}
 /* body */
 .exec-body{flex:1;display:flex;min-height:0}
-.exec-col{display:flex;flex-direction:column;padding:20px 26px;gap:18px;overflow:hidden;justify-content:space-between}
+.exec-col{display:flex;flex-direction:column;padding:12px 20px;gap:8px;overflow:hidden;justify-content:flex-start}
 .exec-col-a{flex:0 0 54%;border-right:1px solid var(--bdr)}
 .exec-col-b{flex:1}
 /* section label */
@@ -200,7 +200,7 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
 /* timeline */
 .exec-timeline{display:flex;flex-direction:column;justify-content:space-between;position:relative;padding-left:16px;flex:1}
 .exec-timeline::before{content:'';position:absolute;left:10px;top:11px;bottom:11px;width:2px;background:linear-gradient(to bottom,var(--g) 40%,rgba(61,220,110,.2) 100%);border-radius:2px}
-.exec-tl-item{display:flex;gap:14px;align-items:flex-start;position:relative}
+.exec-tl-item{display:flex;gap:14px;align-items:flex-start;position:relative;margin-bottom:18px}
 .exec-tl-item:last-child{}
 .exec-tl-dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-left:-16px;z-index:1;margin-top:2px}
 .exec-tl-dot.filled{background:var(--g);border:2px solid var(--g)}
@@ -693,6 +693,7 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
 <!-- ══════════ SLIDE 2 — EXECUTIVE SUMMARY ══════════ -->
 <div class="slide" id="s-exec">
   <div class="exec-hdr">
+    <div class="hdr-logo" style="position:absolute;left:var(--px);top:50%;transform:translateY(-50%)"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfMTc1ODEiIGRhdGEtbmFtZT0iR3JvdXAgMTc1ODEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMTUuMjQ1IiBoZWlnaHQ9IjcyLjAyOSIgdmlld0JveD0iMCAwIDExNS4yNDUgNzIuMDI5Ij4NCiAgPGRlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPg0KICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZV8zMDgiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDMwOCIgd2lkdGg9IjExNS4yNDUiIGhlaWdodD0iNzIuMDI5IiBmaWxsPSJub25lIi8+DQogICAgPC9jbGlwUGF0aD4NCiAgPC9kZWZzPg0KICA8ZyBpZD0iR3JvdXBfNDMxIiBkYXRhLW5hbWU9Ikdyb3VwIDQzMSIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk2NSIgZGF0YS1uYW1lPSJQYXRoIDk2NSIgZD0iTTkyMy41MzMsMjg4LjEzNmEuNTY5LjU2OSwwLDAsMC0uNDQ1LjMyNmMtMS4wMzIsMi4yNDMtOC43MjcsMTUuMDk0LTMuMDkyLDE2LjA0NCwzLjM2Ni41NjgsNi42MDgtMy40NzIsOS44NjctOC4zMzguNTYxLS41NywwLS42MTYtLjQ4OC0uMjU0LTMuMiw0LjUtNS41MjgsNi43ODItNy4yMTcsNi42NTQtMi4xNTQtLjE2Myw0Ljk3OS0xMS42NzEsNC42NzgtMTMuMy0uMjU2LTEuMzkzLTIuNDQyLTEuMjQtMy4zLTEuMTI5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODQ3LjQ3NiAtMjY1Ljk1MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjYiIGRhdGEtbmFtZT0iUGF0aCA5NjYiIGQ9Ik04MTcuOCwyOTIuODg4YzEuNTc3LTIuOTcsMS4yLTQuNDM1LjMtNC42MDYtMi44NjQtLjU0NS04LjMwOSwxMC4zNTMtNS40NSwxMC41OTIsMi4wNTEuMTcxLDUuMTUyLTUuOTg2LDUuMTUyLTUuOTg2bC42MzIsMi40OHMtMy40NTcsNy42NTQtOC4zNzEsNi45MDVjLTYuMDE5LS45MTctMS4zMzktMTYuNzE0LDcuMjMxLTE2LjUxMiwzLjUxNC4wODMsMy43MjcsMi42MjIsMy4xMzcsNS41NzEtLjMxMywxLjU2Ny0yLjkyNSwyLjExMi0yLjYyOSwxLjU1NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc0NS4zNTkgLTI2My44MikiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjciIGRhdGEtbmFtZT0iUGF0aCA5NjciIGQ9Ik0zNzQuOTkyLDI3OC4yMzdjLjQxNi0zLjAzOC40MDctNS41My0uNzA2LTUuNTcyLTMuNTUxLS4xMzMtOS4xMzIsMTMuODQtNS42NCwxMy41MTIsMy44NDctLjM2Miw2LjM0Ni03Ljk0LDYuMzQ2LTcuOTRsLS4wMTcsNC40MzhzLTIuOTkzLDYuNjItOC4zMTUsNi41MThjLTcuNDQ4LS4xNDMtMy4wMjEtMTguNjY1LDYuNTA4LTE5LjM1MSw0LjI4Ni0uMzA5LDQuMjQ1LDMuNTgzLDMuNDcyLDYuODQ5LS40NSwxLjktMS43NTMsMi4zMTUtMS42NDgsMS41NDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzUuMDUgLTI0OS4xMDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY4IiBkYXRhLW5hbWU9IlBhdGggOTY4IiBkPSJNNzY2LjQsMzE5LjkzMnMuMDQ1LDIuMDQ2LDEuMDk0LDIuNzgzYy44OTIuNjI3LDMuMDU5LjM1Miw0LjgxNi0xLjIuMTguNTM4LS40LDEuMTQ2LS40LDEuMTQ2LTEuNjY4LDEuMjM1LTMuODg3LDEuNjk0LTUuMjU5LDEuMDg2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcwNy41NTYgLTI5NS4zNjkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY5IiBkYXRhLW5hbWU9IlBhdGggOTY5IiBkPSJNMTE0MS4xMTUsMjgzLjM0NGMtMi4wMTUtLjQzOC05Ljk0My0uMjA2LTE2Ljc2Ni45M2E0LjExNCw0LjExNCwwLDAsMS0xLjA2Ni0zLjQ1OGMuNjkxLTEuODk1LDMuNDU2LTIuMTMyLDUuODA2LTEuNzI2LDAsMCwuODU3LTIuMTgyLS40LTMuMDk0LTIuMzM0LTEuNy03LjY5MS0uMzQyLTguNTg2LDMuMDk0YTYuOTE2LDYuOTE2LDAsMCwwLDEuMzgyLDUuN2MtMy43MTkuODg4LTYuODgzLDIuMDE1LTcuNTczLDMuNzc1LTIuNTM2LDYuNDY3LDExLjE2OSw2LjA2OCwxMi41NDksMS40ODhhMi44MTEsMi44MTEsMCwwLDAsLjExOS0uNDY5Yy4yODYtMi40MzQtMi4yNzQtMy4yNzItMi4yODYtMy4yNzNzLjM0OS0uMDU3LDEuMjUyLS4xMThoLjAxOWMuMjEyLS4wMTIuNDI2LS4wMjIuNjQyLS4wMzEuNTQ0LS4wMjQuOTQ0LS4wNDEsMS41LS4wNTJoLjA1MmE3OS4yMTQsNzkuMjE0LDAsMCwxLDguNTgzLjMwNmwuMDE4LDBhMjUuNjIsMjUuNjIsMCwwLDEsNi40MDksMS4yczIuMDc0LTMuNDU4LTEuNjU4LTQuMjcxbS0xNy44NjMsNC42NzZjLS4xMzgsMS43NTktNi42NjUsMi45ODUtNi41ODUuNjgyLjAzOS0xLjEzOSwyLjc2My0xLjg2OCw2LjA1My0yLjI1OGEzLjA1LDMuMDUsMCwwLDEsLjUzMiwxLjU3NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMjguMTA0IC0yNTQuMTMyKSIgZmlsbD0iIzE3NWVhOCIvPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk3MCIgZGF0YS1uYW1lPSJQYXRoIDk3MCIgZD0iTTExNjUuOTIzLDU3Ni4yMDhhMS4xLDEuMSwwLDAsMC0uODM2LS4zODQsMS4yMjUsMS4yMjUsMCwxLDAsLjg3NCwyLjA5NGwuODc0LDEuMDY2YTIuNTkzLDIuNTkzLDAsMCwxLTEuNzY4LjYxNSwyLjU0OSwyLjU0OSwwLDEsMS0uMDEtNS4wOTEsMi42MzQsMi42MzQsMCwwLDEsMS43NzcuNjQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNzMuMTQ1IC01MzAuNCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzEiIGRhdGEtbmFtZT0iUGF0aCA5NzEiIGQ9Ik0xMjMyLjk3OCw1NzkuNmEyLjUzMSwyLjUzMSwwLDAsMS0yLjY1MS0yLjU2NSwyLjY1OSwyLjY1OSwwLDAsMSw1LjMxMiwwLDIuNTM0LDIuNTM0LDAsMCwxLTIuNjYxLDIuNTY1bTAtMy43ODVhMS4xMzUsMS4xMzUsMCwwLDAtMS4xMjQsMS4yMiwxLjEzNywxLjEzNywwLDEsMCwxLjEyNC0xLjIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEzNS44NjggLTUzMC4zOTkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTcyIiBkYXRhLW5hbWU9IlBhdGggOTcyIiBkPSJNMTMyMS4xNDIsNTc5LjY3NnYtMi42MTNjMC0uNTQ4LS4xMjUtMS4wMDktLjY4Mi0xLjAwOS0uNTM4LDAtLjguNS0uOCwxLjAzN3YyLjU4NGgtMS41NzV2LTIuNzI4YzAtLjU0OC0uMjExLS44OTMtLjY4Mi0uODkzLS41LDAtLjc4OC40NTEtLjc4OCwxLjAyOHYyLjU5NGgtMS41ODV2LTQuNzg0aDEuNTI3di42NjNoLjAxOWExLjYsMS42LDAsMCwxLDEuNDMxLS44LDEuNTA3LDEuNTA3LDAsMCwxLDEuNDQxLjgxNywxLjcxMSwxLjcxMSwwLDAsMSwxLjUyNy0uODE3LDEuNzUsMS43NSwwLDAsMSwxLjczOSwxLjk2djIuOTU5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMTQuMDcgLTUzMC42MykiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzMiIGRhdGEtbmFtZT0iUGF0aCA5NzMiIGQ9Ik0xMDg2LjgzMiw1ODkuNzI1YTEuNzMyLDEuNzMyLDAsMSwxLTEuNzMyLTEuNzMyLDEuNzMyLDEuNzMyLDAsMCwxLDEuNzMyLDEuNzMyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAwMC4xOTIgLTU0Mi44NDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc0IiBkYXRhLW5hbWU9IlBhdGggOTc0IiBkPSJNMTQwOS44ODUsNDE2LjQ3NGgwbC0uMDE4LDAsLjAxOSwwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwMS42MjQgLTM4NC40OTcpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc1IiBkYXRhLW5hbWU9IlBhdGggOTc1IiBkPSJNOTkzLjgzOSwwYy03LjM3Ny4yOTItMTYuOTY5LDIwLjg4Ny0yMS44ODcsMzYuM2EyMS40MzUsMjEuNDM1LDAsMCwwLDIuNjE4LTIuNDI3LDIxLjA5MiwyMS4wOTIsMCwwLDEtMy4yMyw0LjA0MSw1OC43MDgsNTguNzA4LDAsMCwwLTIuNiwxMi42OTVjLS4wODksNC40MjMsMi45LDQuOSwyLjksNC45YTk4Ljg4Miw5OC44ODIsMCwwLDEsNS43NzMtMjMuODgzQzk4Ny4yMjMsMjIuMjUxLDEwMDIuOTQzLS4zNTYsOTkzLjgzOSwwbS4xODcsMi4xMzRjMy42MjguMzktNy42NjMsMTkuMy0xNS44NDgsMjcuMzM4LDUuOTc2LTE1LjM4OCwxNC4wMDctMjcuNTM2LDE1Ljg0OC0yNy4zMzgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04OTQuMzYgMCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzYiIGRhdGEtbmFtZT0iUGF0aCA5NzYiIGQ9Ik02MTMuMTM5LDI4NS4zN2E2LjMzMyw2LjMzMywwLDAsMCwyLjA2NS4xNjRjLjcyOS0zLjU4OS4wNTctNi44MzQtMi4zMDctNi45NTNhMy4wODgsMy4wODgsMCwwLDAtMS4yNjIuMTc4LDMuNCwzLjQsMCwwLDAtMi4zNDktLjQ3OGMtOC40ODIuMzIyLTEyLjkzNywxNi42NTYtNC4zMDcsMTcuMzczLDUuMTgxLjQzMSw4Ljc4Ny00LjcxNCwxMC4wNTktOS4zOGE3LjExMyw3LjExMywwLDAsMS0xLjktLjkwNW0tNi45NzksNy4yMTNjLTQuMDI1LjIyOS0uMzg5LTEwLjA0MSwzLjgtMTEuMzk1YTMuODY5LDMuODY5LDAsMCwwLDEuNTIyLDMuNzM3cy0xLjcxMyw3LjQ1Mi01LjMyMyw3LjY1OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1NC4yMjMgLTI1Ni45MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzciIGRhdGEtbmFtZT0iUGF0aCA5NzciIGQ9Ik02NC40MjIsMjkwLjQ2N2ExNTQuMzg2LDE1NC4zODYsMCwwLDAtMjMuODYtLjgwN2MzLjQyNS0xMS4xMzEsNC42NTYtMjEuNTc4LDcuNjI5LTIyLjQyMi0uNzE4LTEuMjE3LTMuMTIxLTEuOTY1LTUuMTI1LS42MzYtMi41OTIsMS43MTktMy42MDYsMTIuMzQyLTYuOSwyMy4yNDZDMTcuNjA3LDI5MC45MjMuMjYxLDI5NiwwLDMwNy41NjNjLS4yNSwxMS4yMzQsMTQuNjE1LDEyLjIzNCwyNC40NjcsNi41OTEsNi41NDUtMy43NDksMTAuOTQzLTEwLjM1NiwxMy42NjEtMTcuNjEuNDUyLTEuMjA3LDEuMS0yLjk0MSwxLjEtMi45NDFsLTEuOTg1LS41NjhjLjc3OC0uMDYxLDIuMjM0LS4wNywyLjIzNS0uMDczcTIuNDkzLS4wNzcsNS4wNzQtLjA3M2gwYTE2Ny4wMTcsMTY3LjAxNywwLDAsMSwyMi43MjMsMS43NTNzLjkyNy0zLjY2MS0yLjg2MS00LjE3NE0xNy42NDUsMzEzLjQzOWMtMTAuMywyLjU4NS0xNS4zODgtMS40NzMtMTQuODQyLTYuMzkzLjk4My04Ljg2LDE1LjMzNy0xMi44LDMyLjI4NC0xMy44NzktMy4yMzYsOS4zLTguMywxNy45NzctMTcuNDQzLDIwLjI3MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjQ1LjQ4NCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgPC9nPg0KPC9zdmc+DQo=" alt="Goals.com"/></div>
     <div class="exec-hdr-center">
       <div class="exec-hdr-title">EXECUTIVE <span>SUMMARY</span></div>
       <div class="exec-hdr-sub">A Revolutionary Sales Performance Platform. A Massive Opportunity.</div>
@@ -700,104 +701,142 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
     <div class="exec-hdr-num">02</div>
   </div>
 
-  <div class="exec-stats">
-    <div class="exec-stat"><div class="exec-stat-val">17 Yrs</div><div class="exec-stat-lbl">Industry Experience</div></div>
-    <div class="exec-stat"><div class="exec-stat-val">2 Yrs</div><div class="exec-stat-lbl">In Development</div></div>
-    <div class="exec-stat"><div class="exec-stat-val">400</div><div class="exec-stat-lbl">Users to Break Even</div></div>
-    <div class="exec-stat"><div class="exec-stat-val">$150K</div><div class="exec-stat-lbl">Raise for 5%</div></div>
-    <div class="exec-stat"><div class="exec-stat-val">$100M+</div><div class="exec-stat-lbl">Target Valuation</div></div>
-  </div>
-
   <div class="exec-body">
 
-    <!-- COL A: Background + Pillars + Platform -->
+    <!-- COL A -->
     <div class="exec-col exec-col-a">
 
-      <div>
-        <div class="exec-lbl">Background</div>
-        <p class="exec-p">Over 17 years through DigitalParc, we&rsquo;ve worked with hundreds of sales teams across dozens of industries. In that time, one theme emerged consistently: <strong>nobody loves their CRM.</strong></p>
-        <p class="exec-p" style="margin-top:5px">The tools were too complicated, too expensive, and too focused on tracking activity rather than driving performance. Sales teams were drowning in data entry instead of closing deals.</p>
-        <p class="exec-p" style="margin-top:5px">So, two years ago we began developing <span class="ga">Goals.com</span> &mdash; built from the ground up with a single mission: give sales teams a platform they actually want to use.</p>
-        <div style="margin:8px 0;padding:9px 13px;border-left:3px solid var(--g);background:rgba(61,220,110,.07);border-radius:0 6px 6px 0">
-          <p style="font-size:11.5px;line-height:1.5;color:rgba(255,255,255,.82);font-style:italic;margin:0">&ldquo;We started fresh, meticulously thinking through every feature &mdash; what sales teams actually need vs. what vendors have always assumed they need. The result is a platform built for performance, not compliance.&rdquo;</p>
+      <!-- BACKGROUND -->
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px">
+        <div style="width:22px;height:22px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#000" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <p class="exec-p" style="margin-top:5px">The result was a unified platform that pairs a clean, simple CRM framework with powerful AI-driven tools &mdash; all at a price point that makes adoption a no-brainer.</p>
+        <div style="font-size:13px;font-weight:800;letter-spacing:.14em;color:#fff;text-transform:uppercase">Background</div>
       </div>
 
-      <div>
-        <div class="exec-lbl">Our Three Pillars</div>
-        <div class="exec-pillars">
-          <div class="exec-pillar">
-            <div class="exec-pillar-ico"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="exec-pillar-txt">Simple to Use</div>
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.82);margin:0">Over the last 17 years, through our sister company DigitalParc, the team behind Goals.com has worked with hundreds of sales and marketing teams.</p>
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.82);margin:0">Our marketing process often involves working with various CRM platforms (e.g., Salesforce, HubSpot, Zoho, or Pipedrive). However, an all-too-common theme we experience from our clients &ndash; <strong style="color:#fff">nobody loves their CRM</strong>. The platforms are <strong style="color:#fff">simply too complicated, too expensive</strong> and rarely gain team-wide adoption. And more surprisingly, these CRMs do almost nothing to bolster sales performance.</p>
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.82);margin:0">Over time, we became convinced that a significant opportunity exists to provide businesses with a reinvented take on what a CRM can be:</p>
+
+      <!-- Three Pillars -->
+      <div style="display:flex;border:1px solid var(--bdr);border-radius:8px;overflow:hidden;flex-shrink:0">
+        <div style="flex:1;display:flex;align-items:center;gap:7px;padding:10px 13px;border-right:1px solid var(--bdr)">
+          <div style="width:18px;height:18px;background:rgba(61,220,110,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="var(--g)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span style="font-size:12.5px;color:#fff;font-weight:600;line-height:1.35">Simple to use solution</span>
+        </div>
+        <div style="flex:1;display:flex;align-items:center;gap:7px;padding:10px 13px;border-right:1px solid var(--bdr)">
+          <div style="width:18px;height:18px;background:rgba(61,220,110,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="var(--g)" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <span style="font-size:12.5px;color:#fff;font-weight:600;line-height:1.35">Refreshingly affordable</span>
+        </div>
+        <div style="flex:1;display:flex;align-items:center;gap:7px;padding:7px 10px">
+          <div style="width:18px;height:18px;background:rgba(61,220,110,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="var(--g)" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+          <span style="font-size:12.5px;color:#fff;font-weight:600;line-height:1.35">Significant focus on driving sales performance</span>
+        </div>
+      </div>
+
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.82);margin:0">So, two years ago we began developing a concept for something new &ndash; <strong style="color:var(--g)">Goals.com</strong>.</p>
+
+      <!-- Quote box -->
+      <div style="padding:11px 15px;border-left:3px solid var(--g);background:rgba(61,220,110,.07);border-radius:0 6px 6px 0;flex-shrink:0">
+        <p style="font-size:10px;line-height:1.5;color:rgba(255,255,255,.88);font-weight:600;margin:0">We started fresh, meticulously thinking through features and a user experience that&rsquo;s not only refreshingly simple, but also ensures sales teams remain focused on everything that matters.</p>
+      </div>
+
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.82);margin:0">The result was a unified platform that pairs a clean and simple CRM framework with other features aimed at driving sales performance, features such as:</p>
+
+      <!-- Feature bullets -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px">
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>Goal &amp; Performance Management</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>AI-Powered Note Taking &amp; Suggested Actions</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>AI-Powered Coaching &amp; Insights</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>Contracts &amp; e-Signatures</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>AI-Powered Forecasting</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>Payments &amp; Invoices</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>AI-Powered Commission Tracking</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.8)"><span style="color:var(--g);font-size:9px">&#9679;</span>Advanced Sales Analytics</div>
+      </div>
+
+      <!-- OUR TEAM milestones -->
+      <div style="border:1px solid var(--bdr);border-radius:8px;padding:12px 14px;flex-shrink:0;margin-top:16px">
+        <div style="font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--g);text-transform:uppercase;margin-bottom:10px;text-align:center">Our Team Has Spent the Last Two Years Developing and Launching Goals.com:</div>
+        <div style="display:flex;gap:4px">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+            <div style="width:34px;height:34px;background:rgba(61,220,110,.12);border:1px solid var(--bdrg);border-radius:6px;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--g)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <span style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.35">Platform exists for desktop and mobile app (iOS and Android).</span>
           </div>
-          <div class="exec-pillar">
-            <div class="exec-pillar-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-            <div class="exec-pillar-txt">Refreshingly Affordable</div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+            <div style="width:34px;height:34px;background:rgba(61,220,110,.12);border:1px solid var(--bdrg);border-radius:6px;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--g)" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <span style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.35">Software is programmed using best-in-class technologies</span>
           </div>
-          <div class="exec-pillar">
-            <div class="exec-pillar-ico"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-            <div class="exec-pillar-txt">Focused on Performance</div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+            <div style="width:34px;height:34px;background:rgba(61,220,110,.12);border:1px solid var(--bdrg);border-radius:6px;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--g)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <span style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.35">Successfully tested advertising campaign strategies</span>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+            <div style="width:34px;height:34px;background:rgba(61,220,110,.12);border:1px solid var(--bdrg);border-radius:6px;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--g)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <span style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.35">Successfully onboarded multiple companies around the U.S.</span>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+            <div style="width:34px;height:34px;background:rgba(61,220,110,.12);border:1px solid var(--bdrg);border-radius:6px;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--g)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.35">Achieved market validation</span>
           </div>
         </div>
       </div>
 
-      <div>
-        <div class="exec-lbl">The Goals.com Platform</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;margin-top:6px">
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>Goal &amp; Performance Management</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>AI-Powered Note Taking &amp; Actions</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>AI-Powered Coaching &amp; Insights</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>Contracts &amp; e-Signatures</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>AI-Powered Forecasting</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>Payments &amp; Invoices</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>AI-Powered Commission Tracking</div>
-          <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:rgba(255,255,255,.8);padding:2px 0"><span style="color:var(--g);font-size:10px">&#9679;</span>Advanced Sales Analytics</div>
-        </div>
-      </div>
     </div><!-- /exec-col-a -->
 
-    <!-- COL B: Growth Roadmap + Investment CTA -->
+    <!-- COL B: Ready to Scale + Investment Opportunity -->
     <div class="exec-col exec-col-b">
-      <div class="exec-lbl">Growth Roadmap</div>
-      <div class="exec-timeline">
 
-        <div class="exec-tl-item">
-          <div class="exec-tl-dot filled"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="exec-tl-txt"><b>Platform Built &amp; Live</b><br>2 years of development. Fully functional and actively serving real sales teams today.</div>
+      <!-- WE'RE NOW READY TO SCALE -->
+      <div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+          <div style="width:22px;height:22px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#000" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div style="font-size:13px;font-weight:800;letter-spacing:.1em;color:#fff;text-transform:uppercase;line-height:1.25">We&rsquo;re Now Ready to Scale Goals.com.</div>
         </div>
-
-        <div class="exec-tl-item">
-          <div class="exec-tl-dot filled"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="exec-tl-txt"><b>Market Validation</b><br>400 users needed to break even. Acquisition interest already received from established CRM players.</div>
+        <div class="exec-timeline">
+          <div class="exec-tl-item">
+            <div class="exec-tl-dot filled"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="exec-tl-txt" style="font-size:12.5px;color:rgba(255,255,255,.82)">A mere <strong style="color:var(--g)">400 users</strong> is all it takes for Goals.com to become self-sustainable.</div>
+          </div>
+          <div class="exec-tl-item">
+            <div class="exec-tl-dot filled"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="#000" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="exec-tl-txt" style="font-size:12.5px;color:rgba(255,255,255,.82)">Our goal is to raise <strong style="color:var(--g)">$150,000</strong> by selling <strong style="color:var(--g)">5%</strong> of the company. The capital will be exclusively used to bring Goals.com to cashflow breakeven and beyond.</div>
+          </div>
+          <div class="exec-tl-item">
+            <div class="exec-tl-dot hollow"></div>
+            <div class="exec-tl-txt" style="font-size:12.5px;color:rgba(255,255,255,.82)">From there, we aim to continue scaling, reinvesting all cashflow and using the same blueprint, until we reach between <strong style="color:var(--g)">1,000 and 1,500 users</strong>.</div>
+          </div>
+          <div class="exec-tl-item">
+            <div class="exec-tl-dot hollow"></div>
+            <div class="exec-tl-txt" style="font-size:12.5px;color:rgba(255,255,255,.82)">At that point, Goals.com can realistically execute a <strong style="color:#fff">Series A</strong> round of venture funding, raising a minimum of <strong style="color:var(--g)">$1M</strong> by selling no more than <strong style="color:#fff">10%</strong> of the company. The capital raised from the Series A round should provide us with the necessary resources to scale our way to <strong style="color:var(--g)">15,000 users</strong>, and achieve the <strong style="color:var(--g)">$100M</strong> valuation objective.</div>
+          </div>
+          <div class="exec-tl-item">
+            <div class="exec-tl-dot hollow"></div>
+            <div class="exec-tl-txt" style="font-size:12.5px;color:rgba(255,255,255,.82)">At that point we begin exploring <em>our</em> exit opportunities.</div>
+          </div>
         </div>
-
-        <div class="exec-tl-item">
-          <div class="exec-tl-dot hollow"></div>
-          <div class="exec-tl-txt"><b>$150K Raise</b><br>Fund sales, marketing &amp; operations. Drive first <span class="ga">100 paying customers</span>.</div>
-        </div>
-
-        <div class="exec-tl-item">
-          <div class="exec-tl-dot hollow"></div>
-          <div class="exec-tl-txt"><b>$10M ARR in 48 Months</b><br>Scale to 1,000+ customers through <span class="ga">strategic growth</span> and channel partnerships.</div>
-        </div>
-
-        <div class="exec-tl-item">
-          <div class="exec-tl-dot hollow"></div>
-          <div class="exec-tl-txt"><b>$100M+ Valuation</b><br>Exit or continued growth at <span class="ga">premium SaaS multiples</span> — 10x ARR and beyond.</div>
-        </div>
-
       </div>
 
-      <div class="exec-inv">
-        <div class="exec-inv-left">
-          <div class="exec-inv-lbl">Investment Opportunity</div>
-          <div class="exec-inv-desc">Seeking <span>$150,000</span> for <span>5% equity</span> in a platform that's built, validated, and ready to scale.</div>
+      <!-- INVESTMENT OPPORTUNITY -->
+      <div style="border:1px solid var(--bdrg);border-radius:10px;overflow:hidden;flex-shrink:0;margin-top:40px">
+        <div style="background:rgba(61,220,110,.08);padding:9px 14px;border-bottom:1px solid var(--bdrg)">
+          <div style="font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--g);text-transform:uppercase">Investment Opportunity</div>
         </div>
-        <div class="exec-inv-right">
-          <div class="exec-inv-amt">$150K</div>
-          <div class="exec-inv-sub">for 5% equity</div>
-          <div class="exec-inv-sell">$100M+ Target</div>
+        <div style="display:flex;gap:0">
+          <div style="flex:1;padding:14px 16px;border-right:1px solid var(--bdrg)">
+            <p style="font-size:11.5px;line-height:1.65;color:rgba(255,255,255,.75);margin:0 0 6px 0">Subscription based SaaS products produce some of the most attractive profit margins, often between 70% and 85%. And the scalability of SaaS cannot be matched. As a result, valuation methods for B2B SaaS companies vastly differ from other valuation methods.</p>
+            <p style="font-size:11.5px;line-height:1.65;color:rgba(255,255,255,.75);margin:0">Standard valuation methods for non-SaaS businesses are typically based on multiples of EBITDA, but the more common valuation method used for hypergrowth SaaS companies is multiples of annual recurring revenue (ARR). And the multiple can be significant, often 10X.</p>
+          </div>
+          <div style="width:180px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;background:rgba(61,220,110,.05)">
+            <div style="font-size:9px;color:rgba(255,255,255,.6);line-height:1.4">Our goal is to scale up to <strong style="color:#fff">$10M in ARR in 48 months,</strong> FETCHING A</div>
+            <div style="background:var(--g);border-radius:8px;padding:11px 13px;width:100%;box-sizing:border-box">
+              <div style="font-size:28px;font-weight:900;color:#000;line-height:1">$100M+</div>
+              <div style="font-size:10px;font-weight:800;color:#000;letter-spacing:.08em;text-transform:uppercase;margin-top:3px">Market Valuation.</div>
+            </div>
+            <div style="font-size:13px;font-weight:900;color:#fff;letter-spacing:.06em">THEN SELL.</div>
+          </div>
         </div>
       </div>
 
@@ -811,6 +850,7 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
 <!-- ════════════════════════════ SLIDE 3 — SOFTWARE VALUATION ════════════════ -->
 <div class="slide" id="s2">
   <div class="hdr">
+    <div class="hdr-logo"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfMTc1ODEiIGRhdGEtbmFtZT0iR3JvdXAgMTc1ODEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMTUuMjQ1IiBoZWlnaHQ9IjcyLjAyOSIgdmlld0JveD0iMCAwIDExNS4yNDUgNzIuMDI5Ij4NCiAgPGRlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPg0KICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZV8zMDgiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDMwOCIgd2lkdGg9IjExNS4yNDUiIGhlaWdodD0iNzIuMDI5IiBmaWxsPSJub25lIi8+DQogICAgPC9jbGlwUGF0aD4NCiAgPC9kZWZzPg0KICA8ZyBpZD0iR3JvdXBfNDMxIiBkYXRhLW5hbWU9Ikdyb3VwIDQzMSIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk2NSIgZGF0YS1uYW1lPSJQYXRoIDk2NSIgZD0iTTkyMy41MzMsMjg4LjEzNmEuNTY5LjU2OSwwLDAsMC0uNDQ1LjMyNmMtMS4wMzIsMi4yNDMtOC43MjcsMTUuMDk0LTMuMDkyLDE2LjA0NCwzLjM2Ni41NjgsNi42MDgtMy40NzIsOS44NjctOC4zMzguNTYxLS41NywwLS42MTYtLjQ4OC0uMjU0LTMuMiw0LjUtNS41MjgsNi43ODItNy4yMTcsNi42NTQtMi4xNTQtLjE2Myw0Ljk3OS0xMS42NzEsNC42NzgtMTMuMy0uMjU2LTEuMzkzLTIuNDQyLTEuMjQtMy4zLTEuMTI5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODQ3LjQ3NiAtMjY1Ljk1MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjYiIGRhdGEtbmFtZT0iUGF0aCA5NjYiIGQ9Ik04MTcuOCwyOTIuODg4YzEuNTc3LTIuOTcsMS4yLTQuNDM1LjMtNC42MDYtMi44NjQtLjU0NS04LjMwOSwxMC4zNTMtNS40NSwxMC41OTIsMi4wNTEuMTcxLDUuMTUyLTUuOTg2LDUuMTUyLTUuOTg2bC42MzIsMi40OHMtMy40NTcsNy42NTQtOC4zNzEsNi45MDVjLTYuMDE5LS45MTctMS4zMzktMTYuNzE0LDcuMjMxLTE2LjUxMiwzLjUxNC4wODMsMy43MjcsMi42MjIsMy4xMzcsNS41NzEtLjMxMywxLjU2Ny0yLjkyNSwyLjExMi0yLjYyOSwxLjU1NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc0NS4zNTkgLTI2My44MikiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjciIGRhdGEtbmFtZT0iUGF0aCA5NjciIGQ9Ik0zNzQuOTkyLDI3OC4yMzdjLjQxNi0zLjAzOC40MDctNS41My0uNzA2LTUuNTcyLTMuNTUxLS4xMzMtOS4xMzIsMTMuODQtNS42NCwxMy41MTIsMy44NDctLjM2Miw2LjM0Ni03Ljk0LDYuMzQ2LTcuOTRsLS4wMTcsNC40MzhzLTIuOTkzLDYuNjItOC4zMTUsNi41MThjLTcuNDQ4LS4xNDMtMy4wMjEtMTguNjY1LDYuNTA4LTE5LjM1MSw0LjI4Ni0uMzA5LDQuMjQ1LDMuNTgzLDMuNDcyLDYuODQ5LS40NSwxLjktMS43NTMsMi4zMTUtMS42NDgsMS41NDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzUuMDUgLTI0OS4xMDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY4IiBkYXRhLW5hbWU9IlBhdGggOTY4IiBkPSJNNzY2LjQsMzE5LjkzMnMuMDQ1LDIuMDQ2LDEuMDk0LDIuNzgzYy44OTIuNjI3LDMuMDU5LjM1Miw0LjgxNi0xLjIuMTguNTM4LS40LDEuMTQ2LS40LDEuMTQ2LTEuNjY4LDEuMjM1LTMuODg3LDEuNjk0LTUuMjU5LDEuMDg2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcwNy41NTYgLTI5NS4zNjkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY5IiBkYXRhLW5hbWU9IlBhdGggOTY5IiBkPSJNMTE0MS4xMTUsMjgzLjM0NGMtMi4wMTUtLjQzOC05Ljk0My0uMjA2LTE2Ljc2Ni45M2E0LjExNCw0LjExNCwwLDAsMS0xLjA2Ni0zLjQ1OGMuNjkxLTEuODk1LDMuNDU2LTIuMTMyLDUuODA2LTEuNzI2LDAsMCwuODU3LTIuMTgyLS40LTMuMDk0LTIuMzM0LTEuNy03LjY5MS0uMzQyLTguNTg2LDMuMDk0YTYuOTE2LDYuOTE2LDAsMCwwLDEuMzgyLDUuN2MtMy43MTkuODg4LTYuODgzLDIuMDE1LTcuNTczLDMuNzc1LTIuNTM2LDYuNDY3LDExLjE2OSw2LjA2OCwxMi41NDksMS40ODhhMi44MTEsMi44MTEsMCwwLDAsLjExOS0uNDY5Yy4yODYtMi40MzQtMi4yNzQtMy4yNzItMi4yODYtMy4yNzNzLjM0OS0uMDU3LDEuMjUyLS4xMThoLjAxOWMuMjEyLS4wMTIuNDI2LS4wMjIuNjQyLS4wMzEuNTQ0LS4wMjQuOTQ0LS4wNDEsMS41LS4wNTJoLjA1MmE3OS4yMTQsNzkuMjE0LDAsMCwxLDguNTgzLjMwNmwuMDE4LDBhMjUuNjIsMjUuNjIsMCwwLDEsNi40MDksMS4yczIuMDc0LTMuNDU4LTEuNjU4LTQuMjcxbS0xNy44NjMsNC42NzZjLS4xMzgsMS43NTktNi42NjUsMi45ODUtNi41ODUuNjgyLjAzOS0xLjEzOSwyLjc2My0xLjg2OCw2LjA1My0yLjI1OGEzLjA1LDMuMDUsMCwwLDEsLjUzMiwxLjU3NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMjguMTA0IC0yNTQuMTMyKSIgZmlsbD0iIzE3NWVhOCIvPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk3MCIgZGF0YS1uYW1lPSJQYXRoIDk3MCIgZD0iTTExNjUuOTIzLDU3Ni4yMDhhMS4xLDEuMSwwLDAsMC0uODM2LS4zODQsMS4yMjUsMS4yMjUsMCwxLDAsLjg3NCwyLjA5NGwuODc0LDEuMDY2YTIuNTkzLDIuNTkzLDAsMCwxLTEuNzY4LjYxNSwyLjU0OSwyLjU0OSwwLDEsMS0uMDEtNS4wOTEsMi42MzQsMi42MzQsMCwwLDEsMS43NzcuNjQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNzMuMTQ1IC01MzAuNCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzEiIGRhdGEtbmFtZT0iUGF0aCA5NzEiIGQ9Ik0xMjMyLjk3OCw1NzkuNmEyLjUzMSwyLjUzMSwwLDAsMS0yLjY1MS0yLjU2NSwyLjY1OSwyLjY1OSwwLDAsMSw1LjMxMiwwLDIuNTM0LDIuNTM0LDAsMCwxLTIuNjYxLDIuNTY1bTAtMy43ODVhMS4xMzUsMS4xMzUsMCwwLDAtMS4xMjQsMS4yMiwxLjEzNywxLjEzNywwLDEsMCwxLjEyNC0xLjIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEzNS44NjggLTUzMC4zOTkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTcyIiBkYXRhLW5hbWU9IlBhdGggOTcyIiBkPSJNMTMyMS4xNDIsNTc5LjY3NnYtMi42MTNjMC0uNTQ4LS4xMjUtMS4wMDktLjY4Mi0xLjAwOS0uNTM4LDAtLjguNS0uOCwxLjAzN3YyLjU4NGgtMS41NzV2LTIuNzI4YzAtLjU0OC0uMjExLS44OTMtLjY4Mi0uODkzLS41LDAtLjc4OC40NTEtLjc4OCwxLjAyOHYyLjU5NGgtMS41ODV2LTQuNzg0aDEuNTI3di42NjNoLjAxOWExLjYsMS42LDAsMCwxLDEuNDMxLS44LDEuNTA3LDEuNTA3LDAsMCwxLDEuNDQxLjgxNywxLjcxMSwxLjcxMSwwLDAsMSwxLjUyNy0uODE3LDEuNzUsMS43NSwwLDAsMSwxLjczOSwxLjk2djIuOTU5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMTQuMDcgLTUzMC42MykiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzMiIGRhdGEtbmFtZT0iUGF0aCA5NzMiIGQ9Ik0xMDg2LjgzMiw1ODkuNzI1YTEuNzMyLDEuNzMyLDAsMSwxLTEuNzMyLTEuNzMyLDEuNzMyLDEuNzMyLDAsMCwxLDEuNzMyLDEuNzMyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAwMC4xOTIgLTU0Mi44NDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc0IiBkYXRhLW5hbWU9IlBhdGggOTc0IiBkPSJNMTQwOS44ODUsNDE2LjQ3NGgwbC0uMDE4LDAsLjAxOSwwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwMS42MjQgLTM4NC40OTcpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc1IiBkYXRhLW5hbWU9IlBhdGggOTc1IiBkPSJNOTkzLjgzOSwwYy03LjM3Ny4yOTItMTYuOTY5LDIwLjg4Ny0yMS44ODcsMzYuM2EyMS40MzUsMjEuNDM1LDAsMCwwLDIuNjE4LTIuNDI3LDIxLjA5MiwyMS4wOTIsMCwwLDEtMy4yMyw0LjA0MSw1OC43MDgsNTguNzA4LDAsMCwwLTIuNiwxMi42OTVjLS4wODksNC40MjMsMi45LDQuOSwyLjksNC45YTk4Ljg4Miw5OC44ODIsMCwwLDEsNS43NzMtMjMuODgzQzk4Ny4yMjMsMjIuMjUxLDEwMDIuOTQzLS4zNTYsOTkzLjgzOSwwbS4xODcsMi4xMzRjMy42MjguMzktNy42NjMsMTkuMy0xNS44NDgsMjcuMzM4LDUuOTc2LTE1LjM4OCwxNC4wMDctMjcuNTM2LDE1Ljg0OC0yNy4zMzgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04OTQuMzYgMCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzYiIGRhdGEtbmFtZT0iUGF0aCA5NzYiIGQ9Ik02MTMuMTM5LDI4NS4zN2E2LjMzMyw2LjMzMywwLDAsMCwyLjA2NS4xNjRjLjcyOS0zLjU4OS4wNTctNi44MzQtMi4zMDctNi45NTNhMy4wODgsMy4wODgsMCwwLDAtMS4yNjIuMTc4LDMuNCwzLjQsMCwwLDAtMi4zNDktLjQ3OGMtOC40ODIuMzIyLTEyLjkzNywxNi42NTYtNC4zMDcsMTcuMzczLDUuMTgxLjQzMSw4Ljc4Ny00LjcxNCwxMC4wNTktOS4zOGE3LjExMyw3LjExMywwLDAsMS0xLjktLjkwNW0tNi45NzksNy4yMTNjLTQuMDI1LjIyOS0uMzg5LTEwLjA0MSwzLjgtMTEuMzk1YTMuODY5LDMuODY5LDAsMCwwLDEuNTIyLDMuNzM3cy0xLjcxMyw3LjQ1Mi01LjMyMyw3LjY1OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1NC4yMjMgLTI1Ni45MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzciIGRhdGEtbmFtZT0iUGF0aCA5NzciIGQ9Ik02NC40MjIsMjkwLjQ2N2ExNTQuMzg2LDE1NC4zODYsMCwwLDAtMjMuODYtLjgwN2MzLjQyNS0xMS4xMzEsNC42NTYtMjEuNTc4LDcuNjI5LTIyLjQyMi0uNzE4LTEuMjE3LTMuMTIxLTEuOTY1LTUuMTI1LS42MzYtMi41OTIsMS43MTktMy42MDYsMTIuMzQyLTYuOSwyMy4yNDZDMTcuNjA3LDI5MC45MjMuMjYxLDI5NiwwLDMwNy41NjNjLS4yNSwxMS4yMzQsMTQuNjE1LDEyLjIzNCwyNC40NjcsNi41OTEsNi41NDUtMy43NDksMTAuOTQzLTEwLjM1NiwxMy42NjEtMTcuNjEuNDUyLTEuMjA3LDEuMS0yLjk0MSwxLjEtMi45NDFsLTEuOTg1LS41NjhjLjc3OC0uMDYxLDIuMjM0LS4wNywyLjIzNS0uMDczcTIuNDkzLS4wNzcsNS4wNzQtLjA3M2gwYTE2Ny4wMTcsMTY3LjAxNywwLDAsMSwyMi43MjMsMS43NTNzLjkyNy0zLjY2MS0yLjg2MS00LjE3NE0xNy42NDUsMzEzLjQzOWMtMTAuMywyLjU4NS0xNS4zODgtMS40NzMtMTQuODQyLTYuMzkzLjk4My04Ljg2LDE1LjMzNy0xMi44LDMyLjI4NC0xMy44NzktMy4yMzYsOS4zLTguMywxNy45NzctMTcuNDQzLDIwLjI3MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjQ1LjQ4NCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgPC9nPg0KPC9zdmc+DQo=" alt="Goals.com"/></div>
     <div class="hdr-line"></div>
     <div class="hdr-right"><span class="hdr-label">Understanding Software Valuation</span><span class="hdr-divider">|</span><span class="hdr-num">03</span></div>
   </div>
@@ -868,6 +908,7 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
 </div>
 <div class="slide" id="s3">
   <div class="hdr">
+    <div class="hdr-logo"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfMTc1ODEiIGRhdGEtbmFtZT0iR3JvdXAgMTc1ODEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMTUuMjQ1IiBoZWlnaHQ9IjcyLjAyOSIgdmlld0JveD0iMCAwIDExNS4yNDUgNzIuMDI5Ij4NCiAgPGRlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPg0KICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZV8zMDgiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDMwOCIgd2lkdGg9IjExNS4yNDUiIGhlaWdodD0iNzIuMDI5IiBmaWxsPSJub25lIi8+DQogICAgPC9jbGlwUGF0aD4NCiAgPC9kZWZzPg0KICA8ZyBpZD0iR3JvdXBfNDMxIiBkYXRhLW5hbWU9Ikdyb3VwIDQzMSIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk2NSIgZGF0YS1uYW1lPSJQYXRoIDk2NSIgZD0iTTkyMy41MzMsMjg4LjEzNmEuNTY5LjU2OSwwLDAsMC0uNDQ1LjMyNmMtMS4wMzIsMi4yNDMtOC43MjcsMTUuMDk0LTMuMDkyLDE2LjA0NCwzLjM2Ni41NjgsNi42MDgtMy40NzIsOS44NjctOC4zMzguNTYxLS41NywwLS42MTYtLjQ4OC0uMjU0LTMuMiw0LjUtNS41MjgsNi43ODItNy4yMTcsNi42NTQtMi4xNTQtLjE2Myw0Ljk3OS0xMS42NzEsNC42NzgtMTMuMy0uMjU2LTEuMzkzLTIuNDQyLTEuMjQtMy4zLTEuMTI5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODQ3LjQ3NiAtMjY1Ljk1MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjYiIGRhdGEtbmFtZT0iUGF0aCA5NjYiIGQ9Ik04MTcuOCwyOTIuODg4YzEuNTc3LTIuOTcsMS4yLTQuNDM1LjMtNC42MDYtMi44NjQtLjU0NS04LjMwOSwxMC4zNTMtNS40NSwxMC41OTIsMi4wNTEuMTcxLDUuMTUyLTUuOTg2LDUuMTUyLTUuOTg2bC42MzIsMi40OHMtMy40NTcsNy42NTQtOC4zNzEsNi45MDVjLTYuMDE5LS45MTctMS4zMzktMTYuNzE0LDcuMjMxLTE2LjUxMiwzLjUxNC4wODMsMy43MjcsMi42MjIsMy4xMzcsNS41NzEtLjMxMywxLjU2Ny0yLjkyNSwyLjExMi0yLjYyOSwxLjU1NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc0NS4zNTkgLTI2My44MikiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjciIGRhdGEtbmFtZT0iUGF0aCA5NjciIGQ9Ik0zNzQuOTkyLDI3OC4yMzdjLjQxNi0zLjAzOC40MDctNS41My0uNzA2LTUuNTcyLTMuNTUxLS4xMzMtOS4xMzIsMTMuODQtNS42NCwxMy41MTIsMy44NDctLjM2Miw2LjM0Ni03Ljk0LDYuMzQ2LTcuOTRsLS4wMTcsNC40MzhzLTIuOTkzLDYuNjItOC4zMTUsNi41MThjLTcuNDQ4LS4xNDMtMy4wMjEtMTguNjY1LDYuNTA4LTE5LjM1MSw0LjI4Ni0uMzA5LDQuMjQ1LDMuNTgzLDMuNDcyLDYuODQ5LS40NSwxLjktMS43NTMsMi4zMTUtMS42NDgsMS41NDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzUuMDUgLTI0OS4xMDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY4IiBkYXRhLW5hbWU9IlBhdGggOTY4IiBkPSJNNzY2LjQsMzE5LjkzMnMuMDQ1LDIuMDQ2LDEuMDk0LDIuNzgzYy44OTIuNjI3LDMuMDU5LjM1Miw0LjgxNi0xLjIuMTguNTM4LS40LDEuMTQ2LS40LDEuMTQ2LTEuNjY4LDEuMjM1LTMuODg3LDEuNjk0LTUuMjU5LDEuMDg2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcwNy41NTYgLTI5NS4zNjkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY5IiBkYXRhLW5hbWU9IlBhdGggOTY5IiBkPSJNMTE0MS4xMTUsMjgzLjM0NGMtMi4wMTUtLjQzOC05Ljk0My0uMjA2LTE2Ljc2Ni45M2E0LjExNCw0LjExNCwwLDAsMS0xLjA2Ni0zLjQ1OGMuNjkxLTEuODk1LDMuNDU2LTIuMTMyLDUuODA2LTEuNzI2LDAsMCwuODU3LTIuMTgyLS40LTMuMDk0LTIuMzM0LTEuNy03LjY5MS0uMzQyLTguNTg2LDMuMDk0YTYuOTE2LDYuOTE2LDAsMCwwLDEuMzgyLDUuN2MtMy43MTkuODg4LTYuODgzLDIuMDE1LTcuNTczLDMuNzc1LTIuNTM2LDYuNDY3LDExLjE2OSw2LjA2OCwxMi41NDksMS40ODhhMi44MTEsMi44MTEsMCwwLDAsLjExOS0uNDY5Yy4yODYtMi40MzQtMi4yNzQtMy4yNzItMi4yODYtMy4yNzNzLjM0OS0uMDU3LDEuMjUyLS4xMThoLjAxOWMuMjEyLS4wMTIuNDI2LS4wMjIuNjQyLS4wMzEuNTQ0LS4wMjQuOTQ0LS4wNDEsMS41LS4wNTJoLjA1MmE3OS4yMTQsNzkuMjE0LDAsMCwxLDguNTgzLjMwNmwuMDE4LDBhMjUuNjIsMjUuNjIsMCwwLDEsNi40MDksMS4yczIuMDc0LTMuNDU4LTEuNjU4LTQuMjcxbS0xNy44NjMsNC42NzZjLS4xMzgsMS43NTktNi42NjUsMi45ODUtNi41ODUuNjgyLjAzOS0xLjEzOSwyLjc2My0xLjg2OCw2LjA1My0yLjI1OGEzLjA1LDMuMDUsMCwwLDEsLjUzMiwxLjU3NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMjguMTA0IC0yNTQuMTMyKSIgZmlsbD0iIzE3NWVhOCIvPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk3MCIgZGF0YS1uYW1lPSJQYXRoIDk3MCIgZD0iTTExNjUuOTIzLDU3Ni4yMDhhMS4xLDEuMSwwLDAsMC0uODM2LS4zODQsMS4yMjUsMS4yMjUsMCwxLDAsLjg3NCwyLjA5NGwuODc0LDEuMDY2YTIuNTkzLDIuNTkzLDAsMCwxLTEuNzY4LjYxNSwyLjU0OSwyLjU0OSwwLDEsMS0uMDEtNS4wOTEsMi42MzQsMi42MzQsMCwwLDEsMS43NzcuNjQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNzMuMTQ1IC01MzAuNCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzEiIGRhdGEtbmFtZT0iUGF0aCA5NzEiIGQ9Ik0xMjMyLjk3OCw1NzkuNmEyLjUzMSwyLjUzMSwwLDAsMS0yLjY1MS0yLjU2NSwyLjY1OSwyLjY1OSwwLDAsMSw1LjMxMiwwLDIuNTM0LDIuNTM0LDAsMCwxLTIuNjYxLDIuNTY1bTAtMy43ODVhMS4xMzUsMS4xMzUsMCwwLDAtMS4xMjQsMS4yMiwxLjEzNywxLjEzNywwLDEsMCwxLjEyNC0xLjIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEzNS44NjggLTUzMC4zOTkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTcyIiBkYXRhLW5hbWU9IlBhdGggOTcyIiBkPSJNMTMyMS4xNDIsNTc5LjY3NnYtMi42MTNjMC0uNTQ4LS4xMjUtMS4wMDktLjY4Mi0xLjAwOS0uNTM4LDAtLjguNS0uOCwxLjAzN3YyLjU4NGgtMS41NzV2LTIuNzI4YzAtLjU0OC0uMjExLS44OTMtLjY4Mi0uODkzLS41LDAtLjc4OC40NTEtLjc4OCwxLjAyOHYyLjU5NGgtMS41ODV2LTQuNzg0aDEuNTI3di42NjNoLjAxOWExLjYsMS42LDAsMCwxLDEuNDMxLS44LDEuNTA3LDEuNTA3LDAsMCwxLDEuNDQxLjgxNywxLjcxMSwxLjcxMSwwLDAsMSwxLjUyNy0uODE3LDEuNzUsMS43NSwwLDAsMSwxLjczOSwxLjk2djIuOTU5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMTQuMDcgLTUzMC42MykiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzMiIGRhdGEtbmFtZT0iUGF0aCA5NzMiIGQ9Ik0xMDg2LjgzMiw1ODkuNzI1YTEuNzMyLDEuNzMyLDAsMSwxLTEuNzMyLTEuNzMyLDEuNzMyLDEuNzMyLDAsMCwxLDEuNzMyLDEuNzMyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAwMC4xOTIgLTU0Mi44NDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc0IiBkYXRhLW5hbWU9IlBhdGggOTc0IiBkPSJNMTQwOS44ODUsNDE2LjQ3NGgwbC0uMDE4LDAsLjAxOSwwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwMS42MjQgLTM4NC40OTcpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc1IiBkYXRhLW5hbWU9IlBhdGggOTc1IiBkPSJNOTkzLjgzOSwwYy03LjM3Ny4yOTItMTYuOTY5LDIwLjg4Ny0yMS44ODcsMzYuM2EyMS40MzUsMjEuNDM1LDAsMCwwLDIuNjE4LTIuNDI3LDIxLjA5MiwyMS4wOTIsMCwwLDEtMy4yMyw0LjA0MSw1OC43MDgsNTguNzA4LDAsMCwwLTIuNiwxMi42OTVjLS4wODksNC40MjMsMi45LDQuOSwyLjksNC45YTk4Ljg4Miw5OC44ODIsMCwwLDEsNS43NzMtMjMuODgzQzk4Ny4yMjMsMjIuMjUxLDEwMDIuOTQzLS4zNTYsOTkzLjgzOSwwbS4xODcsMi4xMzRjMy42MjguMzktNy42NjMsMTkuMy0xNS44NDgsMjcuMzM4LDUuOTc2LTE1LjM4OCwxNC4wMDctMjcuNTM2LDE1Ljg0OC0yNy4zMzgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04OTQuMzYgMCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzYiIGRhdGEtbmFtZT0iUGF0aCA5NzYiIGQ9Ik02MTMuMTM5LDI4NS4zN2E2LjMzMyw2LjMzMywwLDAsMCwyLjA2NS4xNjRjLjcyOS0zLjU4OS4wNTctNi44MzQtMi4zMDctNi45NTNhMy4wODgsMy4wODgsMCwwLDAtMS4yNjIuMTc4LDMuNCwzLjQsMCwwLDAtMi4zNDktLjQ3OGMtOC40ODIuMzIyLTEyLjkzNywxNi42NTYtNC4zMDcsMTcuMzczLDUuMTgxLjQzMSw4Ljc4Ny00LjcxNCwxMC4wNTktOS4zOGE3LjExMyw3LjExMywwLDAsMS0xLjktLjkwNW0tNi45NzksNy4yMTNjLTQuMDI1LjIyOS0uMzg5LTEwLjA0MSwzLjgtMTEuMzk1YTMuODY5LDMuODY5LDAsMCwwLDEuNTIyLDMuNzM3cy0xLjcxMyw3LjQ1Mi01LjMyMyw3LjY1OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1NC4yMjMgLTI1Ni45MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzciIGRhdGEtbmFtZT0iUGF0aCA5NzciIGQ9Ik02NC40MjIsMjkwLjQ2N2ExNTQuMzg2LDE1NC4zODYsMCwwLDAtMjMuODYtLjgwN2MzLjQyNS0xMS4xMzEsNC42NTYtMjEuNTc4LDcuNjI5LTIyLjQyMi0uNzE4LTEuMjE3LTMuMTIxLTEuOTY1LTUuMTI1LS42MzYtMi41OTIsMS43MTktMy42MDYsMTIuMzQyLTYuOSwyMy4yNDZDMTcuNjA3LDI5MC45MjMuMjYxLDI5NiwwLDMwNy41NjNjLS4yNSwxMS4yMzQsMTQuNjE1LDEyLjIzNCwyNC40NjcsNi41OTEsNi41NDUtMy43NDksMTAuOTQzLTEwLjM1NiwxMy42NjEtMTcuNjEuNDUyLTEuMjA3LDEuMS0yLjk0MSwxLjEtMi45NDFsLTEuOTg1LS41NjhjLjc3OC0uMDYxLDIuMjM0LS4wNywyLjIzNS0uMDczcTIuNDkzLS4wNzcsNS4wNzQtLjA3M2gwYTE2Ny4wMTcsMTY3LjAxNywwLDAsMSwyMi43MjMsMS43NTNzLjkyNy0zLjY2MS0yLjg2MS00LjE3NE0xNy42NDUsMzEzLjQzOWMtMTAuMywyLjU4NS0xNS4zODgtMS40NzMtMTQuODQyLTYuMzkzLjk4My04Ljg2LDE1LjMzNy0xMi44LDMyLjI4NC0xMy44NzktMy4yMzYsOS4zLTguMywxNy45NzctMTcuNDQzLDIwLjI3MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjQ1LjQ4NCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgPC9nPg0KPC9zdmc+DQo=" alt="Goals.com"/></div>
     <div class="hdr-line"></div>
     <div class="hdr-right"><span class="hdr-label">The Platform</span><span class="hdr-divider">|</span><span class="hdr-num">04</span></div>
   </div>
@@ -1101,6 +1142,7 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
 <!-- ════════════════════════════ SLIDE 8 — ACQUISITION INTEREST ════════════════ -->
 <div class="slide" id="s8">
   <div class="hdr">
+    <div class="hdr-logo"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfMTc1ODEiIGRhdGEtbmFtZT0iR3JvdXAgMTc1ODEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMTUuMjQ1IiBoZWlnaHQ9IjcyLjAyOSIgdmlld0JveD0iMCAwIDExNS4yNDUgNzIuMDI5Ij4NCiAgPGRlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPg0KICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZV8zMDgiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDMwOCIgd2lkdGg9IjExNS4yNDUiIGhlaWdodD0iNzIuMDI5IiBmaWxsPSJub25lIi8+DQogICAgPC9jbGlwUGF0aD4NCiAgPC9kZWZzPg0KICA8ZyBpZD0iR3JvdXBfNDMxIiBkYXRhLW5hbWU9Ikdyb3VwIDQzMSIgY2xpcC1wYXRoPSJ1cmwoI2NsaXAtcGF0aCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk2NSIgZGF0YS1uYW1lPSJQYXRoIDk2NSIgZD0iTTkyMy41MzMsMjg4LjEzNmEuNTY5LjU2OSwwLDAsMC0uNDQ1LjMyNmMtMS4wMzIsMi4yNDMtOC43MjcsMTUuMDk0LTMuMDkyLDE2LjA0NCwzLjM2Ni41NjgsNi42MDgtMy40NzIsOS44NjctOC4zMzguNTYxLS41NywwLS42MTYtLjQ4OC0uMjU0LTMuMiw0LjUtNS41MjgsNi43ODItNy4yMTcsNi42NTQtMi4xNTQtLjE2Myw0Ljk3OS0xMS42NzEsNC42NzgtMTMuMy0uMjU2LTEuMzkzLTIuNDQyLTEuMjQtMy4zLTEuMTI5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODQ3LjQ3NiAtMjY1Ljk1MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjYiIGRhdGEtbmFtZT0iUGF0aCA5NjYiIGQ9Ik04MTcuOCwyOTIuODg4YzEuNTc3LTIuOTcsMS4yLTQuNDM1LjMtNC42MDYtMi44NjQtLjU0NS04LjMwOSwxMC4zNTMtNS40NSwxMC41OTIsMi4wNTEuMTcxLDUuMTUyLTUuOTg2LDUuMTUyLTUuOTg2bC42MzIsMi40OHMtMy40NTcsNy42NTQtOC4zNzEsNi45MDVjLTYuMDE5LS45MTctMS4zMzktMTYuNzE0LDcuMjMxLTE2LjUxMiwzLjUxNC4wODMsMy43MjcsMi42MjIsMy4xMzcsNS41NzEtLjMxMywxLjU2Ny0yLjkyNSwyLjExMi0yLjYyOSwxLjU1NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc0NS4zNTkgLTI2My44MikiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NjciIGRhdGEtbmFtZT0iUGF0aCA5NjciIGQ9Ik0zNzQuOTkyLDI3OC4yMzdjLjQxNi0zLjAzOC40MDctNS41My0uNzA2LTUuNTcyLTMuNTUxLS4xMzMtOS4xMzIsMTMuODQtNS42NCwxMy41MTIsMy44NDctLjM2Miw2LjM0Ni03Ljk0LDYuMzQ2LTcuOTRsLS4wMTcsNC40MzhzLTIuOTkzLDYuNjItOC4zMTUsNi41MThjLTcuNDQ4LS4xNDMtMy4wMjEtMTguNjY1LDYuNTA4LTE5LjM1MSw0LjI4Ni0uMzA5LDQuMjQ1LDMuNTgzLDMuNDcyLDYuODQ5LS40NSwxLjktMS43NTMsMi4zMTUtMS42NDgsMS41NDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMzUuMDUgLTI0OS4xMDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY4IiBkYXRhLW5hbWU9IlBhdGggOTY4IiBkPSJNNzY2LjQsMzE5LjkzMnMuMDQ1LDIuMDQ2LDEuMDk0LDIuNzgzYy44OTIuNjI3LDMuMDU5LjM1Miw0LjgxNi0xLjIuMTguNTM4LS40LDEuMTQ2LS40LDEuMTQ2LTEuNjY4LDEuMjM1LTMuODg3LDEuNjk0LTUuMjU5LDEuMDg2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcwNy41NTYgLTI5NS4zNjkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTY5IiBkYXRhLW5hbWU9IlBhdGggOTY5IiBkPSJNMTE0MS4xMTUsMjgzLjM0NGMtMi4wMTUtLjQzOC05Ljk0My0uMjA2LTE2Ljc2Ni45M2E0LjExNCw0LjExNCwwLDAsMS0xLjA2Ni0zLjQ1OGMuNjkxLTEuODk1LDMuNDU2LTIuMTMyLDUuODA2LTEuNzI2LDAsMCwuODU3LTIuMTgyLS40LTMuMDk0LTIuMzM0LTEuNy03LjY5MS0uMzQyLTguNTg2LDMuMDk0YTYuOTE2LDYuOTE2LDAsMCwwLDEuMzgyLDUuN2MtMy43MTkuODg4LTYuODgzLDIuMDE1LTcuNTczLDMuNzc1LTIuNTM2LDYuNDY3LDExLjE2OSw2LjA2OCwxMi41NDksMS40ODhhMi44MTEsMi44MTEsMCwwLDAsLjExOS0uNDY5Yy4yODYtMi40MzQtMi4yNzQtMy4yNzItMi4yODYtMy4yNzNzLjM0OS0uMDU3LDEuMjUyLS4xMThoLjAxOWMuMjEyLS4wMTIuNDI2LS4wMjIuNjQyLS4wMzEuNTQ0LS4wMjQuOTQ0LS4wNDEsMS41LS4wNTJoLjA1MmE3OS4yMTQsNzkuMjE0LDAsMCwxLDguNTgzLjMwNmwuMDE4LDBhMjUuNjIsMjUuNjIsMCwwLDEsNi40MDksMS4yczIuMDc0LTMuNDU4LTEuNjU4LTQuMjcxbS0xNy44NjMsNC42NzZjLS4xMzgsMS43NTktNi42NjUsMi45ODUtNi41ODUuNjgyLjAzOS0xLjEzOSwyLjc2My0xLjg2OCw2LjA1My0yLjI1OGEzLjA1LDMuMDUsMCwwLDEsLjUzMiwxLjU3NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMjguMTA0IC0yNTQuMTMyKSIgZmlsbD0iIzE3NWVhOCIvPg0KICAgIDxwYXRoIGlkPSJQYXRoXzk3MCIgZGF0YS1uYW1lPSJQYXRoIDk3MCIgZD0iTTExNjUuOTIzLDU3Ni4yMDhhMS4xLDEuMSwwLDAsMC0uODM2LS4zODQsMS4yMjUsMS4yMjUsMCwxLDAsLjg3NCwyLjA5NGwuODc0LDEuMDY2YTIuNTkzLDIuNTkzLDAsMCwxLTEuNzY4LjYxNSwyLjU0OSwyLjU0OSwwLDEsMS0uMDEtNS4wOTEsMi42MzQsMi42MzQsMCwwLDEsMS43NzcuNjQ0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwNzMuMTQ1IC01MzAuNCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzEiIGRhdGEtbmFtZT0iUGF0aCA5NzEiIGQ9Ik0xMjMyLjk3OCw1NzkuNmEyLjUzMSwyLjUzMSwwLDAsMS0yLjY1MS0yLjU2NSwyLjY1OSwyLjY1OSwwLDAsMSw1LjMxMiwwLDIuNTM0LDIuNTM0LDAsMCwxLTIuNjYxLDIuNTY1bTAtMy43ODVhMS4xMzUsMS4xMzUsMCwwLDAtMS4xMjQsMS4yMiwxLjEzNywxLjEzNywwLDEsMCwxLjEyNC0xLjIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEzNS44NjggLTUzMC4zOTkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTcyIiBkYXRhLW5hbWU9IlBhdGggOTcyIiBkPSJNMTMyMS4xNDIsNTc5LjY3NnYtMi42MTNjMC0uNTQ4LS4xMjUtMS4wMDktLjY4Mi0xLjAwOS0uNTM4LDAtLjguNS0uOCwxLjAzN3YyLjU4NGgtMS41NzV2LTIuNzI4YzAtLjU0OC0uMjExLS44OTMtLjY4Mi0uODkzLS41LDAtLjc4OC40NTEtLjc4OCwxLjAyOHYyLjU5NGgtMS41ODV2LTQuNzg0aDEuNTI3di42NjNoLjAxOWExLjYsMS42LDAsMCwxLDEuNDMxLS44LDEuNTA3LDEuNTA3LDAsMCwxLDEuNDQxLjgxNywxLjcxMSwxLjcxMSwwLDAsMSwxLjUyNy0uODE3LDEuNzUsMS43NSwwLDAsMSwxLjczOSwxLjk2djIuOTU5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMTQuMDcgLTUzMC42MykiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzMiIGRhdGEtbmFtZT0iUGF0aCA5NzMiIGQ9Ik0xMDg2LjgzMiw1ODkuNzI1YTEuNzMyLDEuNzMyLDAsMSwxLTEuNzMyLTEuNzMyLDEuNzMyLDEuNzMyLDAsMCwxLDEuNzMyLDEuNzMyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAwMC4xOTIgLTU0Mi44NDkpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc0IiBkYXRhLW5hbWU9IlBhdGggOTc0IiBkPSJNMTQwOS44ODUsNDE2LjQ3NGgwbC0uMDE4LDAsLjAxOSwwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwMS42MjQgLTM4NC40OTcpIiBmaWxsPSIjMTc1ZWE4Ii8+DQogICAgPHBhdGggaWQ9IlBhdGhfOTc1IiBkYXRhLW5hbWU9IlBhdGggOTc1IiBkPSJNOTkzLjgzOSwwYy03LjM3Ny4yOTItMTYuOTY5LDIwLjg4Ny0yMS44ODcsMzYuM2EyMS40MzUsMjEuNDM1LDAsMCwwLDIuNjE4LTIuNDI3LDIxLjA5MiwyMS4wOTIsMCwwLDEtMy4yMyw0LjA0MSw1OC43MDgsNTguNzA4LDAsMCwwLTIuNiwxMi42OTVjLS4wODksNC40MjMsMi45LDQuOSwyLjksNC45YTk4Ljg4Miw5OC44ODIsMCwwLDEsNS43NzMtMjMuODgzQzk4Ny4yMjMsMjIuMjUxLDEwMDIuOTQzLS4zNTYsOTkzLjgzOSwwbS4xODcsMi4xMzRjMy42MjguMzktNy42NjMsMTkuMy0xNS44NDgsMjcuMzM4LDUuOTc2LTE1LjM4OCwxNC4wMDctMjcuNTM2LDE1Ljg0OC0yNy4zMzgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04OTQuMzYgMCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzYiIGRhdGEtbmFtZT0iUGF0aCA5NzYiIGQ9Ik02MTMuMTM5LDI4NS4zN2E2LjMzMyw2LjMzMywwLDAsMCwyLjA2NS4xNjRjLjcyOS0zLjU4OS4wNTctNi44MzQtMi4zMDctNi45NTNhMy4wODgsMy4wODgsMCwwLDAtMS4yNjIuMTc4LDMuNCwzLjQsMCwwLDAtMi4zNDktLjQ3OGMtOC40ODIuMzIyLTEyLjkzNywxNi42NTYtNC4zMDcsMTcuMzczLDUuMTgxLjQzMSw4Ljc4Ny00LjcxNCwxMC4wNTktOS4zOGE3LjExMyw3LjExMywwLDAsMS0xLjktLjkwNW0tNi45NzksNy4yMTNjLTQuMDI1LjIyOS0uMzg5LTEwLjA0MSwzLjgtMTEuMzk1YTMuODY5LDMuODY5LDAsMCwwLDEuNTIyLDMuNzM3cy0xLjcxMyw3LjQ1Mi01LjMyMyw3LjY1OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1NC4yMjMgLTI1Ni45MSkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgICA8cGF0aCBpZD0iUGF0aF85NzciIGRhdGEtbmFtZT0iUGF0aCA5NzciIGQ9Ik02NC40MjIsMjkwLjQ2N2ExNTQuMzg2LDE1NC4zODYsMCwwLDAtMjMuODYtLjgwN2MzLjQyNS0xMS4xMzEsNC42NTYtMjEuNTc4LDcuNjI5LTIyLjQyMi0uNzE4LTEuMjE3LTMuMTIxLTEuOTY1LTUuMTI1LS42MzYtMi41OTIsMS43MTktMy42MDYsMTIuMzQyLTYuOSwyMy4yNDZDMTcuNjA3LDI5MC45MjMuMjYxLDI5NiwwLDMwNy41NjNjLS4yNSwxMS4yMzQsMTQuNjE1LDEyLjIzNCwyNC40NjcsNi41OTEsNi41NDUtMy43NDksMTAuOTQzLTEwLjM1NiwxMy42NjEtMTcuNjEuNDUyLTEuMjA3LDEuMS0yLjk0MSwxLjEtMi45NDFsLTEuOTg1LS41NjhjLjc3OC0uMDYxLDIuMjM0LS4wNywyLjIzNS0uMDczcTIuNDkzLS4wNzcsNS4wNzQtLjA3M2gwYTE2Ny4wMTcsMTY3LjAxNywwLDAsMSwyMi43MjMsMS43NTNzLjkyNy0zLjY2MS0yLjg2MS00LjE3NE0xNy42NDUsMzEzLjQzOWMtMTAuMywyLjU4NS0xNS4zODgtMS40NzMtMTQuODQyLTYuMzkzLjk4My04Ljg2LDE1LjMzNy0xMi44LDMyLjI4NC0xMy44NzktMy4yMzYsOS4zLTguMywxNy45NzctMTcuNDQzLDIwLjI3MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjQ1LjQ4NCkiIGZpbGw9IiMxNzVlYTgiLz4NCiAgPC9nPg0KPC9zdmc+DQo=" alt="Goals.com"/></div>
     <div class="hdr-line"></div>
     <div class="hdr-right"><span class="hdr-label">Acquisition Interest</span><span class="hdr-divider">|</span><span class="hdr-num">08</span></div>
   </div>
@@ -1119,7 +1161,7 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
           <p class="s8-ep">I&rsquo;m reaching out on behalf of <strong>Act!</strong>, a CRM with over <strong>21,000 SMB customer subscriptions.</strong> They asked that I connect with you about their acquisition interest in Goals.com to explore whether there may be a strategic fit and potential for an introduction.</p>
           <p class="s8-ep">I work for Genz &amp; Associates, a retained M&amp;A advisor hired by Act! to support their acquisition efforts. A potential partnership with Act! could help enhance your tech stack, strengthen your customer base, and accelerate growth. It may also offer personal opportunities such as liquidity, succession planning, or the ability to scale with a larger partner while supporting the long-term success of your employees.</p>
           <p class="s8-ep">Act! recognizes that exploring an acquisition involves thoughtful consideration, and their approach is centered on building relationships first.</p>
-          <p class="s8-ep">Would you be open to a brief introductory call with my firm&rsquo;s Senior Vice President Ryan Chanon and I? Even if the timing isn&rsquo;t ideal, we would welcome the opportunity to connect.</p>
+          <p class="s8-ep">Below is a link to a short presentation highlighting Act! and their acquisition growth strategy. Would you be open to a brief introductory call with my firm&rsquo;s Senior Vice President Ryan Chanon and I? Even if the timing isn&rsquo;t ideal, we would welcome the opportunity to connect.</p>
           <p class="s8-ep">Please let me know your availability for a brief call.</p>
         </div>
         <div class="s8-sig">
@@ -1135,14 +1177,14 @@ html,body{width:100%;height:100%;background:#000;font-family:'Inter',-apple-syst
                 <div class="s8-email-body">
           <p class="s8-ep">Hi Andrew,</p>
           <p class="s8-ep">I hope all is well.</p>
-          <p class="s8-ep">Following up on my prior messages regarding <strong>Act!</strong> &mdash; an SMB focused CRM with over <strong>21,000 customer subscriptions</strong>.</p>
+          <p class="s8-ep">Following up on my prior messages regarding <strong>Act!</strong> an SMB focused CRM with over <strong>21,000 customer subscriptions.</strong> Act! requested that we reach out to explore a potential acquisition with Goals.com.</p>
           <p class="s8-ep">Below are a few ways a partnership with Act! could create value for your business:</p>
           <ul class="s8-list">
             <li>Flexibility to structure a transaction that fits your goals, whether that means receiving 100% cash at close, continuing in a leadership role, or fully transitioning out</li>
             <li>Access to capital to accelerate growth and scale operations</li>
             <li>Opportunities for employee advancement and long-term stability through 39+ year legacy in the CRM industry</li>
           </ul>
-          <p class="s8-ep">Would you be open to a quick call to explore alignment? Even if now is not the right time, we&rsquo;d appreciate the chance to connect.</p>
+          <p class="s8-ep">Below is a link to the Act! overview for your reference. Would you be open to a quick call to explore alignment? Even if now is not the right time, we&rsquo;d appreciate the chance to connect and begin building a relationship.</p>
           <p class="s8-ep">Please let me know a convenient time for a brief introductory call with my firm&rsquo;s Senior Vice President Ryan Chanon and I.</p>
         </div>
         <div class="s8-sig">
